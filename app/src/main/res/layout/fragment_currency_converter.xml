@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrencyConverterFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="800pt">
+
+            <TextView
+                android:id="@+id/textView_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="My Balances"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_EUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:text="0.00"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/textView_USD"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_balance" />
+
+            <TextView
+                android:id="@+id/textView_USD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_EUR"
+                app:layout_constraintEnd_toStartOf="@+id/textView_BGN"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView_EUR"
+                app:layout_constraintTop_toTopOf="@+id/textView_EUR" />
+
+            <TextView
+                android:id="@+id/textView_BGN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_USD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView_USD"
+                app:layout_constraintTop_toTopOf="@+id/textView_USD" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                app:layout_constraintEnd_toEndOf="@+id/textView_EUR"
+                app:layout_constraintStart_toStartOf="@+id/textView_EUR"
+                app:layout_constraintTop_toBottomOf="@+id/textView_EUR" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD"
+                app:layout_constraintEnd_toEndOf="@+id/textView_USD"
+                app:layout_constraintStart_toStartOf="@+id/textView_USD"
+                app:layout_constraintTop_toBottomOf="@+id/textView_USD" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IRR"
+                app:layout_constraintEnd_toEndOf="@+id/textView_BGN"
+                app:layout_constraintStart_toStartOf="@+id/textView_BGN"
+                app:layout_constraintTop_toBottomOf="@+id/textView_BGN" />
+
+            <TextView
+                android:id="@+id/textView_Exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="124dp"
+                android:text="Currency Exchange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView_balance"
+                app:layout_constraintTop_toBottomOf="@+id/textView_balance" />
+
+            <ImageButton
+                android:id="@+id/sellSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/red"
+                android:src="@drawable/ic_baseline_arrow_upward_24"
+                app:layout_constraintEnd_toEndOf="@+id/textView_Exchange"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView_Exchange"
+                app:layout_constraintTop_toBottomOf="@+id/textView_Exchange"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/receiveSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:backgroundTint="@color/green"
+                android:src="@drawable/ic_baseline_arrow_downward_24"
+                app:layout_constraintEnd_toEndOf="@+id/sellSign"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/sellSign"
+                app:layout_constraintTop_toBottomOf="@+id/sellSign"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Sell"
+                app:layout_constraintBottom_toBottomOf="@+id/sellSign"
+                app:layout_constraintStart_toEndOf="@+id/sellSign"
+                app:layout_constraintTop_toTopOf="@+id/sellSign"
+                app:layout_constraintVertical_bias="0.583" />
+
+            <TextView
+                android:id="@+id/receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Receive"
+                app:layout_constraintBottom_toBottomOf="@+id/receiveSign"
+                app:layout_constraintStart_toEndOf="@+id/receiveSign"
+                app:layout_constraintTop_toTopOf="@+id/receiveSign"
+                app:layout_constraintVertical_bias="0.333" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal_first"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:inputType="numberDecimal"
+                android:minWidth="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/sellSign"
+                app:layout_constraintEnd_toStartOf="@+id/spinner_first"
+                app:layout_constraintStart_toEndOf="@+id/sell"
+                app:layout_constraintTop_toTopOf="@+id/sellSign"
+                app:layout_constraintVertical_bias="0.5"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal_second"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:inputType="numberDecimal"
+                android:minWidth="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/receiveSign"
+                app:layout_constraintEnd_toStartOf="@+id/spinner_second"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal_first"
+                app:layout_constraintTop_toTopOf="@+id/receiveSign"
+                app:layout_constraintVertical_bias="0.5"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextNumberDecimal_first"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal_first" />
+
+            <Spinner
+                android:id="@+id/spinner_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextNumberDecimal_second"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal_second" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                app:cornerRadius="100dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receiveSign"
+                android:layout_marginTop="50dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
